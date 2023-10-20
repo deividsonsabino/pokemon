@@ -1,0 +1,21 @@
+[{
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
+    "name": "Pikachu",
+    "type": "Thunder"
+}, {
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
+    "name": "Charmander",
+    "type": "Fire"
+}, {
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
+    "name": "Bulbasaur",
+    "type": "Grass"
+}, {
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
+    "name": "Squirtle",
+    "type": "Water"
+}, {
+    "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/074.png",
+    "name": "Geodude",
+    "type": "Rock"
+}]
