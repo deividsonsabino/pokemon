@@ -1,21 +1,26 @@
 [{
     "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
     "name": "Pikachu",
-    "type": "Thunder"
+    "type": "Thunder",
+    "price": 1000
 }, {
     "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
     "name": "Charmander",
-    "type": "Fire"
+    "type": "Fire",
+    "price": 300
 }, {
     "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
     "name": "Bulbasaur",
-    "type": "Grass"
+    "type": "Grass",
+    "price": 300
 }, {
     "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
     "name": "Squirtle",
-    "type": "Water"
+    "type": "Water",
+    "price": 300
 }, {
     "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/074.png",
     "name": "Geodude",
-    "type": "Rock"
+    "type": "Rock",
+    "price": 100
 }]
