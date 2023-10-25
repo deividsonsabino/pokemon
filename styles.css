@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    flex-direction: column;
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    place-items: center;
+    min-height: 100vh;
+    background-color: aliceblue;
+}
+
+#pokemons {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+}
+
+.pokemon-card {
+    background-color: beige;
+    padding: 12px;
+}

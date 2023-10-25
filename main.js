@@ -1,36 +1,57 @@
+var pokemons = []
+
 async function handleData() {
     await fetch("./data.json")
         .then(response => response.json())
-        .then(json => renderPokemons(json))
+        .then(json => myDexPokemons(json))
 }
 
-function renderPokemons(json) {
+function cauthPokemons(pokemon) {
+    if (pokemon != "") {
+        pokemons.push(pokemon)
+    }
+}
 
-    json.map(pokemon => {
-        const card = pokemons.appendChild(document.createElement("div"))
-        card.id = "card"
+async function myDexPokemons(pokes) {
+    console.log(pokes)
+    await pokes.map(poke => {
+        pokemonsDiv = document.getElementById("pokemons")
+        const card = pokemonsDiv.appendChild(document.createElement("div"))
+        card.id = poke.name
+        card.className = "pokemon-card"
         const img = card.appendChild(document.createElement("img"))
-        const name = card.appendChild(document.createElement("h2"))
-        const type = card.appendChild(document.createElement("h3"))
-
-        img.id = "pokemon-picture"
-
-        img.src = pokemon.picture;
+        img.src = poke.picture;
 
         img.width = "200";
 
-        img.alt = "This is pokemon " + pokemon.name
+        img.alt = "This is pokemon " + poke.name
+        const pokemonName = card.appendChild(document.createElement("h3"))
 
-        name.innerText = pokemon.name
+        pokemonName.innerText = poke.name
+        pokemonName.id = poke.name
 
-        img.id = "pokemon-name"
+        const pokemonPrice = card.appendChild(document.createElement("p")).innerText = "preco :" + poke.price + "K"
 
-        type.innerText = pokemon.type
 
+        var button = card.appendChild(document.createElement("button"))
+        button.id = poke.name
+        button.innerText = "Vender"
+
+        button.addEventListener("click", () => sellPokemons(poke.name))
     })
+}
 
+function sellPokemons(pokemon) {
+    var filterPokemons = pokemons.filter(poke => poke != pokemon)
+    pokemons = filterPokemons
+    var sell = document.getElementById(pokemon)
+    sell.innerText = ""
 
 
 }
 
+
 handleData()
+
+cauthPokemons("kadabra")
+myDexPokemons()
